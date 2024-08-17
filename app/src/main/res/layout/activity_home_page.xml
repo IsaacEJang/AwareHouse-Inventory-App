@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".home_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.8"
+    android:background="@color/my_primary">
+
+        <!-- Home Page header -->
+        <LinearLayout
+            android:id="@+id/header_home_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/card_notifications_home_page"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="80dp">
+
+            <!-- Inventory Icon -->
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/home_icon"/>
+
+            <!-- Inventory Dashboard Text -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Welcome"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- View Notifications Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_notifications_home_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerInParent="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="32dp">
+
+            <!-- Layout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Notifications Icon-->
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/notificaitons_icon"
+                    android:tint="@color/my_primary"
+                    android:background="@null"
+                    tools:ignore="UseAppTint" />
+
+                <!-- Notifications Text-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/my_primary"
+                    android:textSize="20sp"
+                    android:text="Get Notifications"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- View Inventory Dashboard Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_inventory_home_page"
+            android:layout_below="@+id/card_notifications_home_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="32dp">
+
+            <!-- Layout-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Inventory Icon -->
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/box_icon"
+                    android:tint="@color/my_primary"
+                    android:background="@null"
+                    tools:ignore="UseAppTint" />
+
+                <!-- Inventory Text -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/my_primary"
+                    android:textSize="20sp"
+                    android:text="View Inventory Dashboard"/>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Create Account Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_manage_users_home_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_below="@+id/card_inventory_home_page"
+            android:padding="10dp"
+            app:cardCornerRadius="32dp">
+
+            <!-- Layout -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Create Account Icon -->
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/login_icon"
+                    android:tint="@color/my_primary"
+                    android:background="@null"
+                    tools:ignore="UseAppTint"/>
+
+                <!-- Manage Users Text -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/my_primary"
+                    android:textSize="20sp"
+                    android:text="Manage Users"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Log Out Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_logout_home_page"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="32dp">
+
+            <!-- Log Out Text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/my_primary"
+                android:textSize="15sp"
+                android:text="Log Out"/>
+
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

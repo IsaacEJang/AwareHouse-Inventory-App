@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_primary"
+    android:alpha="0.8"
+    tools:context=".login_screen">
+
+    <!-- Header Container-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/card_notifications"
+        android:gravity="center"
+        android:padding="20dp">
+
+            <!-- Icon -->
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/app_logo"/>
+
+            <!-- App Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Aware House"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:padding="10dp"
+                android:textStyle="bold" />
+
+            <!-- Slogan -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="- BE INFORMED ON THE GO -"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:alpha=".7" />
+
+
+    </LinearLayout>
+
+    <!-- Login Card-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="20dp"
+        android:padding="20dp">
+
+        <!-- Card Vertical Orientation-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <!-- Line Up-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Welcome Text-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome"
+                    android:textColor="@color/my_primary"
+                    android:textSize="32sp"
+                    android:textStyle="bold"/>
+
+                <!-- Create Account Button-->
+                <Button
+                    android:id="@+id/restricted_sign_up_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:textSize="15dp"
+                    android:layout_alignParentEnd="true"
+                    app:cornerRadius="32dp"/>
+
+            </RelativeLayout>
+
+            <!-- Please Log In Text-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha=".7"
+                android:text="Please Login In" />
+
+            <!-- Spacer-->
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"/>
+
+            <!-- Email Container  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="5dp">
+
+                <!-- Email Field  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Email Address:"/>
+
+                <!-- Email Input  -->
+                <EditText
+                    android:id="@+id/input_email_login_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <!-- Password Container  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="5dp">
+
+                <!-- Password Text  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Password:"/>
+
+                <!-- Password Input  -->
+                <EditText
+                    android:id="@+id/input_password_login_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:inputType="textPassword"/>
+
+            </LinearLayout>
+
+            <!-- Remember Me Checkbox  -->
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rememeber me"
+                android:layout_centerVertical="true"
+                android:alpha=".7"/>
+
+            <!-- Spacer-->
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <!-- Login Button-->
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Login"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:cornerRadius="32dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+

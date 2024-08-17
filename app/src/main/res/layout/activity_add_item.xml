@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.8"
+    android:background="@color/my_primary"
+    tools:context=".add_item">
+
+    <!-- Return to Inventory Button -->
+    <ImageButton
+        android:id="@+id/button_return_add_items"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:src="@drawable/return_icon"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:background="@null"/>
+
+    <!-- Add item Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/card_remove_items"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <!-- Add item Icon -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/box_icon"/>
+
+        <!-- Add item Text  -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="Add Items"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Add item Card  -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_remove_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="32dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <!-- Layout  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <!-- Item Name Container  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:orientation="vertical">
+
+                <!-- Item Name text  -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/my_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Item Name:"/>
+
+                <!-- Item Name Input  -->
+                <EditText
+                    android:id="@+id/input_item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <!-- Location Container  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:orientation="vertical">
+
+                <!-- Location text  -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/my_primary"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:text="Locations"/>
+
+                <!-- Rows 1 - 9 Check box -->
+                <CheckBox
+                    android:id="@+id/check_box_rows_1_9_add_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Rows 1 - 9"/>
+
+                <!-- Rows 10 - 19 Check box -->
+                <CheckBox
+                    android:id="@+id/check_box_rows_10_19_add_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Rows 10 - 19"/>
+
+                <!-- Rows 20 - 29 Check box -->
+                <CheckBox
+                    android:id="@+id/check_box_rows_20_29_add_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Rows 20 - 29"/>
+
+                <!-- Rows 30 - 39 Check box -->
+                <CheckBox
+                    android:id="@+id/check_box_rows_30_39_add_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Rows 30 - 39"/>
+
+
+            </LinearLayout>
+
+            <!-- Quantity Container  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:orientation="vertical">
+
+                <!-- Quantity text  -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/my_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Quantity:"/>
+
+                <!-- Quantity Input  -->
+                <EditText
+                    android:id="@+id/input_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <!-- Add Items Button  -->
+            <Button
+                android:id="@+id/button_add_item"
+                android:layout_marginVertical="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Add Items"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
